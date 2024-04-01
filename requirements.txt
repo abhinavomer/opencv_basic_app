@@ -1,0 +1,4 @@
+pip>=24.0
+numpy
+streamlit
+opencv-python==4.8.1.78
