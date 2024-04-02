@@ -2,7 +2,7 @@ import cv2
 import streamlit as st
 import numpy as np
 import av
-from streamlit_webrtc import webrtc_streamer,WebRtcMode
+from streamlit_webrtc import webrtc_streamer,WebRtcMode,RTCConfiguration
 
 st.sidebar.title("Options for OpenCV App")
 rad=st.sidebar.radio("Navigation Bar",['Image Face Detection','Live_Cam','Canny_Filter','Blur_Filter','Features','Face Detector','Eye Detector'])
@@ -39,12 +39,12 @@ if rad=='Live_Cam':
     webrtc_streamer(
         key="example",
         mode=WebRtcMode.SENDRECV,
-        rtc_configuration={
+        rtc_configuration=RTCConfiguration({
             "iceServers": [{
             'urls': 'turn:my-turn-server.mycompany.com:19403',
             'username': 'optional-username',
             'credential': 'auth-token'}],
-        },
+        }),
         video_frame_callback=callback,
         media_stream_constraints={"video": True, "audio": False},
     )
