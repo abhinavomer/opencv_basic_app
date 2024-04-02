@@ -39,6 +39,8 @@ if rad=='Live_Cam':
     webrtc_streamer(
         key="example",
         video_frame_callback= callback,
+        rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
     )
 if rad=='Face Detector':
     face_cascade=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -56,6 +58,8 @@ if rad=='Face Detector':
     webrtc_streamer(
         key="example",
         video_frame_callback= callback,
+        rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
     )
 
 if rad=='Eye Detector':
@@ -74,6 +78,8 @@ if rad=='Eye Detector':
     webrtc_streamer(
         key="example",
         video_frame_callback= callback,
+        rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
     )
             
 if rad=='Canny_Filter':
@@ -90,6 +96,8 @@ if rad=='Canny_Filter':
     webrtc_streamer(
         key="example",
         video_frame_callback= callback,
+        rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
     )
 
 if rad=='Blur_Filter':
@@ -107,6 +115,8 @@ if rad=='Blur_Filter':
     webrtc_streamer(
         key="example",
         video_frame_callback= callback,
+        rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
     )
 if rad=='Features':
 
@@ -133,5 +143,7 @@ if rad=='Features':
     webrtc_streamer(
         key="example",
         video_frame_callback= callback,
+        rtc_configuration={
+        "iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
     )
 
