@@ -41,11 +41,9 @@ if rad=='Live_Cam':
         mode=WebRtcMode.SENDRECV,
         rtc_configuration={
             "iceServers": [{
-            "urls": "turn:openrelay.metered.ca:80",
-            "username": "openrelayproject",
-            "credentials": "openrelayproject"}],
-            "iceServers": [{
-            "urls": "stun:stun.l.google.com:19302"}]
+            'urls': 'turn:my-turn-server.mycompany.com:19403',
+            'username': 'optional-username',
+            'credential': 'auth-token'}],
         },
         video_frame_callback=callback,
         media_stream_constraints={"video": True, "audio": False},
