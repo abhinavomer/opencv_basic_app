@@ -47,7 +47,6 @@ if rad=='Live_Cam':
         },
         video_frame_callback=callback,
         media_stream_constraints={"video": True, "audio": False},
-        async_processing=True,
     )
 if rad=='Face Detector':
     face_cascade=cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
