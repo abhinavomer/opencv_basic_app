@@ -35,7 +35,7 @@ if rad == 'Live_Cam':
         key="live_cam",
         mode=WebRtcMode.SENDRECV,
         rtc_configuration=RTCConfiguration({
-            "iceServers": [{"urls": ["stun:stun.1.google.com:19302"]}],
+            "iceServers": [{"urls": ['turn:my-turn-server.mycompany.com:19403'],"username":'optional-username',"credential":'auth-token'}],
         }),
         video_frame_callback=callback,
         media_stream_constraints={"video": True, "audio": False},
