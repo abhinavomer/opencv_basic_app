@@ -38,6 +38,7 @@ if rad == 'Live_Cam':
             "iceServers": [{"urls": ['turn:my-turn-server.mycompany.com:19403'],"username":'optional-username',"credential":'auth-token'}],
         }),
         video_frame_callback=callback,
+        video_processor_factory=None,
         media_stream_constraints={"video": True, "audio": False},
         async_processing=True,
     )
