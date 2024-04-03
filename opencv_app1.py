@@ -32,14 +32,13 @@ if rad == 'Live_Cam':
         return av.VideoFrame.from_ndarray(img, format="bgr24")
 
     webrtc_streamer(
-        key="live_cam",
+        key="face_detector",
         mode=WebRtcMode.SENDRECV,
         rtc_configuration=RTCConfiguration({
-            "iceServers": [{"urls": ['turn:my-turn-server.mycompany.com:19403'],"username":'optional-username',"credential":'auth-token'}],
+            "iceServers": [{"urls": ["stun:stun.1.google.com:19302"]}],
         }),
         video_frame_callback=callback,
-        video_processor_factory=None,
-        media_stream_constraints={"video": True, "audio": False},
+         media_stream_constraints={"video": {"width":300,"height":400}, "audio": False},
         async_processing=True,
     )
 
@@ -62,7 +61,7 @@ if rad == 'Face Detector':
             "iceServers": [{"urls": ["stun:stun.1.google.com:19302"]}],
         }),
         video_frame_callback=callback,
-        media_stream_constraints={"video": True, "audio": False},
+         media_stream_constraints={"video": {"width":300,"height":400}, "audio": False},
         async_processing=True,
     )
 
