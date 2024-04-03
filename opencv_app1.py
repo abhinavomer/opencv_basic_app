@@ -28,6 +28,7 @@ if rad == 'Live_Cam':
     st.title("Live Cam ")
     def callback(frame):
         img = frame.to_ndarray(format="bgr24")
+        img=cv2.resize(img,(100,100))
         img = cv2.flip(img, 1)
         return av.VideoFrame.from_ndarray(img, format="bgr24")
 
@@ -38,8 +39,7 @@ if rad == 'Live_Cam':
             "iceServers": [{"urls": ["stun:stun.1.google.com:19302"]}],
         }),
         video_frame_callback=callback,
-        media_stream_constraints={"video": {"width":100,"height":100,"frameRate":{"ideal":5}}, "audio": False},
-        async_processing=True,
+        media_stream_constraints={"video": {"width":100,"height":100,"frameRate":{"ideal":1}}, "audio": False},
     )
 
 if rad == 'Face Detector':
