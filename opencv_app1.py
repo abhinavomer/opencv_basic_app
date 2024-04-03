@@ -39,7 +39,7 @@ if rad == 'Live_Cam':
             "iceServers": [{"urls": ["stun:stun.1.google.com:19302"]}],
         }),
         video_frame_callback=callback,
-        media_stream_constraints={"video": {"width":100,"height":100,"frameRate":{"ideal":1}}, "audio": False},
+        media_stream_constraints={"video": {"width": {"ideal": 300},"height": {"ideal": 400},"frameRate": {"ideal": 5},"audio": False}},async_processing=True,
     )
 
 if rad == 'Face Detector':
