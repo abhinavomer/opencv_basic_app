@@ -38,7 +38,7 @@ if rad == 'Live_Cam':
             "iceServers": [{"urls": ["stun:stun.1.google.com:19302"]}],
         }),
         video_frame_callback=callback,
-         media_stream_constraints={"video": {"width":300,"height":400}, "audio": False},
+        media_stream_constraints={"video": {"width":300,"height":400,"frameRate":{"ideal":10}}, "audio": False},
         async_processing=True,
     )
 
@@ -61,7 +61,7 @@ if rad == 'Face Detector':
             "iceServers": [{"urls": ["stun:stun.1.google.com:19302"]}],
         }),
         video_frame_callback=callback,
-         media_stream_constraints={"video": {"width":300,"height":400}, "audio": False},
+        media_stream_constraints={"video": {"width":300,"height":400,"frameRate":{"ideal":10}}, "audio": False},
         async_processing=True,
     )
 
