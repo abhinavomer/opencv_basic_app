@@ -107,7 +107,7 @@ if op=='Image_Filters':
 
 if op=='Live_Filters':
     st.sidebar.title("Different Filters:-")
-    st.sidebar.write("Live Filters (Working fine on local machine but not working here due to memory issue.)")
+    st.sidebar.write("Live Filters (Working fine on local machine but not working here due to low memory allotment.)")
     rad = st.sidebar.radio("Live Filters", ['Live_Cam', 'Canny_live_Filter', 'Blur_live_Filter', 'Features_live', 'Live_Face Detector', 'Live_Eye Detector'])
 
     if rad == 'Live_Cam':
